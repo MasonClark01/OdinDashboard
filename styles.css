@@ -12,12 +12,12 @@ a{
     text-decoration: none;
 }
 .profilePic{
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
     border-radius: 100%;
 }
 .header{
-    background-color: rgb(156, 156, 249);
+    background-color: whitesmoke;
     display: grid;
     grid-template: 1fr / 2fr 2fr 1fr 1fr;
     grid-area: 1 / 2 / 1 / 5;
@@ -28,10 +28,11 @@ a{
     flex-direction: column;
 }
 .searchBar>input{
-    width: 50%;
+    width: 75%;
     border-radius: 20px;
-    padding: 5px;
+    padding: 8px;
     border: none;
+    background-color: rgb(200, 200, 255);
 }
 .searchBar>input:focus{
     outline: none;
@@ -80,7 +81,12 @@ a{
     margin-top: 1rem;
 }
 .userName{
-    color: white;
+    color: black;
+    transition: .25s;
+}
+a.userName:hover{
+    color: rgb(100, 100, 255);
+    transition: .25s;
 }
 .rightHead>ul{
     display: flex;
@@ -93,7 +99,8 @@ a{
 }
 .headerButtons{
     border-radius: 20px;
-    padding: 5px 30px;
+    width: 95px;
+    padding: 5px 0px;
     transition: .25s;
 }
 .headerButtons:hover{
@@ -106,22 +113,25 @@ a{
     padding: 0;
 }
 .content{
-    background-color: violet;
+    background-color: rgba(225, 225, 255, 0.8);
     grid-area: 2 / 2 / 5 / 5;
     display: grid;
     grid-template: 1fr / 1fr 1fr 1fr;
+    gap: 4px;
+    padding: 8px;
 }
 .projects{
-    border: 5px solid orange;
     grid-area: 1 / 1 / 1 / 3;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4px;
 }
 .project{
     display: flex;
     flex-direction: column;
     flex: auto;
-    border: solid 4px black;
+    border: solid 2px black;
+    border-radius: 10px;
     word-wrap: break-word;
     padding: 2%;
 }
@@ -145,25 +155,27 @@ a{
 }
 .announce-and-trend{
     grid-area: 1 / 3 / 1 / 4;
-    border: 5px solid orange;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .announce{
-    border-bottom: 3px dashed seagreen;
+    border-bottom: 2px dashed rgb(100, 100, 255);
 }
 .trend{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
 }
 .trendingAcct>a{
     text-decoration: none;
-    color: white;
+    color: rgb(100, 100, 255);
 }
 .sidebar{
-    background-color: green;
+    background-color: rgb(100, 100, 255);
     grid-area: 1 / 1 / 6 / 1;
     display: flex;
     flex-direction: column;
@@ -181,6 +193,12 @@ a{
 .sidebarLink{
     text-decoration: none;
     color: white;
+    font-size: 1em;
+    transition: .25s;
+}
+.sidebarLink:hover{
+    font-size: 1.25em;
+    transition: .25s;
 }
 .contentTabs{
     display: flex;
@@ -193,7 +211,7 @@ a{
     gap: 8px;
 }
 .footer{
-    background-color: yellow;
+    background-color: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -201,5 +219,10 @@ a{
 }
 .footer>p>a{
     text-decoration: none;
-    color: green;
+    color: rgb(100, 100, 255);
+    transition: .25s;
+}
+.footer>p>a:hover{
+    font-size: 20px;
+    transition: .25s;
 }
